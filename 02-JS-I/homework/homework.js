@@ -254,7 +254,7 @@ if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra ===
 // No modificar nada debajo de esta línea
 // --------------------------------
 
-module.exports = {
+ module.exports = {
   nuevaString,
   nuevoNum,
   nuevoBool,
