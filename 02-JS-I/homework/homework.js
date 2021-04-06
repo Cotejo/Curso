@@ -41,7 +41,7 @@ function suma(x, y) {
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-  return y - x;
+  return x - y;
 }
 
 function multiplica(x, y) {
@@ -60,7 +60,7 @@ function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (x == y) {
+  if (x === y) {
   return true;
 } else {
 return false;
@@ -228,7 +228,7 @@ function areaDelTriangulo(base, altura){
   if (area) {
 return base * altura / 2
 }
-}
+
 
 
 function deEuroAdolar(euro){
@@ -248,13 +248,9 @@ function esVocal(letra){
   return "Dato incorrecto"
 }
 if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
-  return "Es vocal"
+  return esVocal;
 }
-}
-//Me dio error en algunas cosas, pero se supone que le tengo bien, lo he visto que les pasa en los videos de zoom que son los videos de resolviendo los ejercicios.
-
-
-
+};
 // No modificar nada debajo de esta línea
 // --------------------------------
 
@@ -292,4 +288,4 @@ module.exports = {
   areaDelTriangulo,
   deEuroAdolar,
   esVocal,
-};
+ };
