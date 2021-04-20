@@ -1,16 +1,33 @@
 // No cambies los nombres de las funciones.
 
+const { Body } = require("node-fetch");
+
 function obtenerMayor(x, y) {
   // "x" e "y" son números enteros (int).
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
+  switch(true){
+    case x < y : return y;
+    brake;
+    case x > y: return x;
+    brake;
+      default:
+        return ( x || y);
+
+  }
 }
+
 
 function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
+  if (edad >= 18){
+    return 'Allowed';
+  }if( edad < 18){
+    return 'Not allowed'
+  }
 }
   
 function conection(status) {
@@ -19,7 +36,15 @@ function conection(status) {
   //Cuando el estado es igual a 2, el usuario está "Away"
   //De lo contrario, presumimos que el usuario está "Offline"
   //Devolver el estado de conexión de usuario en cada uno de los casos.
+if(status === 1){
+  return 'Online';
+}else if ( status === 2){
+  return 'Away';
 }
+else{
+  return 'Offline';
+};
+};
 
 function saludo(idioma) {
   // Devuelve un saludo en tres diferentes lenguajes:
@@ -28,6 +53,21 @@ function saludo(idioma) {
   // Si "idioma" es "ingles", devuelve "Hello!"
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
+  var idioma = ''; 
+  switch (idioma) {
+     case 'Aleman':
+   return 'Guten Tag!';
+       break;
+       case 'Mandarin':
+       return 'Ni hao!';
+       break;
+       case 'Ingles':
+        return 'Hello!'
+       brake
+      default: 
+      return 'Hola!';
+      break;
+   }
 }
 
 function colors(color) {
@@ -38,18 +78,41 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  var color = '';
+  switch (color) {
+    case 'Blue':
+      case 'red':
+        case 'green':
+          case 'orange':
+            return 'this is' + color;
+            break;
+            default:
+              return 'Color not found';
+  }
 }
 
 function esDiezOCinco(numero) {
   // Devuelve "true" si "numero" es 10 o 5
   // De lo contrario, devuelve "false"
   // Tu código:
+  var numero = '';
+  if(numero === 10 || 5){
+    return true;
+  }else{
+    return false;
+  };
 }
 
 function estaEnRango(numero) {
   // Devuelve "true" si "numero" es menor que 50 y mayor que 20
   // De lo contrario, devuelve "false"
   // Tu código:
+  var numero = '';
+  if(numero > 20 && numero < 50){
+    return true;
+  }else{
+    return false;
+  }
 }
 
 function esEntero(numero) {
@@ -60,6 +123,11 @@ function esEntero(numero) {
   // De lo contrario, devuelve "false"
   // Pista: Puedes resolver esto usando `Math.floor`
   // Tu código:
+if(numero % 1 === 0){
+  return true;
+}else{
+  return false;
+};
 }
 
 function fizzBuzz(numero) {
@@ -67,6 +135,19 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 5, devuelve "buzz"
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
+  var numero = i;
+  var i = numero;
+  for (var i = 0; i <= 15; i++){
+if ((i % 3) && (5 === 0)){
+  return 'fizzbuzz';
+} else if (i % 3 === 0){
+  return 'fizz';
+}else if(i % 5 === 0){
+  return 'buzz';
+}else{
+  return i;
+};
+  }
 }
 
 function operadoresLogicos(num1, num2, num3) {
@@ -75,7 +156,18 @@ function operadoresLogicos(num1, num2, num3) {
   //Si alguno de los tres números es negativo, retornar ---> "Hay negativos"
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
-  //Si no se cumplen ninguna de las condiciones anteriores, retornar false. 
+  //Si no se cumplen ninguna de las condiciones anteriores, retornar false. ) {
+if (num1 < 0 || num2 < 0 || num3 < 0){
+  return 'Hay negativos';}
+  else if (num1 == 0 || num2 == 0 || num3 == 0){
+    return 'Error';
+}else if ( num3 > num2 && num3 > num1){
+  return num3 + 1;
+}else if (num1 > num2 && num1 > num2){
+return 'Numero 1 es mayor y positivo'
+}else{
+  return false;
+};
 }
 
 function esPrimo(numero) {
@@ -84,33 +176,65 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  var numero = '';
+var i = numero;
+  for (var i = 1; i <= 100; i++){
+  if(i % numero === 0){
+return true;
+  }else{
+    return false;
+  };
+
+}
 }
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
-  //Escribe tu código aquí
-
+  //Escribe tu código aquí}
+  if(valor === true){
+    return 'Soy Verdadero';
+  }else{//LEER COMENTARI0= LO INTENTE DE VARIAS FORMAS CORRECTAS Y AUN CON LA DE LOS EJERCICIOS RESUELTOS Y NO ME PASA.
+    return 'Soy falso';
+  }
 }
+
 
 function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 6 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
-  //Escribe tu código aquí   
-  
+  //Escribe tu código aquílet 
+  tablaDelSeis = [];
+  for(let i = 0; i <= 10; i++){
+    tablaDelSeis.push (i * 6);}
+  {
+   return tablaDelSeis;
+  }
 }
 
 function tieneTresDigitos(numero){
   //Leer un número entero y retornar true si tiene 3 dígitos. Caso contrario, retorna false.
   //Escribe tu código aquí
-  
-}
+  if(numero < 999){
+    return true;
+  }else(numero > 99)
+    return false;
+  }
 
 function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
+  var numero = 0;
+  var x = '';
+   do {
+    numero +=5;
+     x += numero;
+     return(numero)
+   } while (numero < 40);
+  
 }
+
 
 
 // No modificar nada debajo de esta línea
